@@ -12,20 +12,12 @@ st.set_page_config(
 #Load data
 monthly_df, future_df, performance_df = load_shared_data()
 
-st.title("📊 City Crime Intelligence Platform")
+st.title("City Crime Intelligence Platform")
 st.markdown("Forecasting & Risk Analytics (2020 - 2025 Projection)")
 st.markdown("---")
 
 #Sidebar
 city = st.selectbox("Select City", monthly_df["City"].unique(), width = 300)
-
-# #Creating tabs
-# tab1, tab2, tab3 = st.tabs([
-#     "📈 City Analysis",
-#     "🏆 City Comparison",
-#     "📊 Volatility vs Accuracy"
-# ]
-# )
 
 city_data = monthly_df[monthly_df["City"] == city]
 future_data = future_df[future_df["City"] == city]
@@ -59,7 +51,7 @@ elif risk_score > 0.65:
 else:
     risk_label = "🟢 Low Risk"
 
-st.subheader("Risk Classification 🚨")
+st.subheader("Risk Classification")
 
 st.markdown(f"### {risk_label}")
 st.write(f"Risk Score: {round(risk_score, 3)}")
@@ -95,7 +87,7 @@ st.plotly_chart(fig, use_container_width = True)
 
 st.markdown("---")
 
-st.subheader("📉 Model Performance")
+st.subheader("Model Performance")
 
 col1, col2, col3 = st.columns(3)
 col1.metric("MAE", round(float(performance_data["MAE"].values[0]), 2))
@@ -106,4 +98,5 @@ st.download_button(
     label = "Download 2025 Forecast",
     data = future_data.to_csv(index = False),
     file_name = f"{city}_2025_forecast.csv"
+
 )
