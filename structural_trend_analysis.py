@@ -10,7 +10,7 @@ st.set_page_config(
     page_icon = "🧠"
 )
 
-st.title("🧠 Structural Trend Continuation")
+st.title("Structural Trend Continuation")
 
 #Load data
 monthly_df, future_df, performance_df = load_shared_data()
@@ -105,7 +105,7 @@ with tab3:
     st.plotly_chart(fig_slope, use_container_width = True)
 
 st.markdown("---")
-st.subheader("📊 Volatility Comparison")
+st.subheader("Volatility Comparison")
 
 #Historical Volatility
 hist_vol = city_hist["Crime_Count"].std() / city_hist["Crime_Count"].mean()
