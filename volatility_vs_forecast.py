@@ -9,7 +9,7 @@ st.set_page_config(
     page_icon = "📉"
 )
 
-st.title("📉 Volatility vs Forecast Error")
+st.title("Volatility vs Forecast Error")
 st.markdown("---")
 
 monthly_df, _, performance_df = load_shared_data()
@@ -39,4 +39,5 @@ fig_scatter.update_traces(textposition = "middle right")
 st.plotly_chart(fig_scatter, use_container_width = True)
 
 st.markdown("Statistical Analysis indicates a significant positive correlation "
+
             "between volatility and percentage forecast error (p < 0.001).")
