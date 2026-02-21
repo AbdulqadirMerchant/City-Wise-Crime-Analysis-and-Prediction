@@ -12,7 +12,7 @@ st.set_page_config(
 #Load data
 monthly_df, future_df, performance_df = load_shared_data()
 
-st.title("🏆 City Ranking by Forecast Error")
+st.title("City Ranking by Forecast Error")
 st.markdown("---")
 
 ranking = performance_df.sort_values("MAE")
@@ -29,7 +29,7 @@ st.dataframe(ranking, hide_index = True)
 
 st.markdown("---")
 
-st.subheader("🔥 Top 5 Projected Rising Risk Cities")
+st.subheader("Top 5 Projected Rising Risk Cities")
 
 risk_list = []
 
@@ -50,7 +50,7 @@ risk_df = pd.DataFrame(risk_list).sort_values("Risk Score", ascending = False)
 st.dataframe(risk_df.head(5), hide_index=True)
 
 st.markdown("---")
-st.subheader("🔎 Model Selection Rationale")
+st.subheader("Model Selection Rationale")
 
 st.write("""
 Initial experimentation compared SARIMA and Random Forest on representative cities.
@@ -58,4 +58,5 @@ Random Forest consistently achieved lower MAE under rolling validation and
 better captured nonlinear patterns.
 
 Therefore, Rolling Random Forest was selected as the primary forecasting model.
+
 """)
