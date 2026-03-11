@@ -215,7 +215,7 @@ Programming Language: <img src = "https://skillicons.dev/icons?i=py" width = "10
 Data Analysis: <img src = "https://pandas.pydata.org/static/img/pandas_white.svg" width = "100" height = "100"> <br />
 Data Visualization: <img src = "https://matplotlib.org/stable/_static/logo2.svg" width = "100" height = "100"> <br />
 Forecast Models: <img src = "https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" width = "100" height = "100"> <br />
-Interactive Plot: <img src = "https://plotly.com/all_static/images/plotly-logomark.png" width = "100" height = "100"> <br />
+Interactive Plot: <img src = "https://www.vhv.rs/dpng/d/605-6050027_plotly-dash-logo-hd-png-download.png" width = "100" height = "100"> <br />
 Dashboard: <img src = "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/streamlit-icon.png" width = "100" height = "100">
 
 ## Installation
