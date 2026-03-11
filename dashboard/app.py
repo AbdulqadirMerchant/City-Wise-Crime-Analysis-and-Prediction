@@ -3,9 +3,9 @@ import pandas as pd
 
 @st.cache_data
 def load_shared_data():
-    monthly_df = pd.read_csv("monthly_data.csv")
-    future_df = pd.read_csv("future_projection.csv")
-    performance_df = pd.read_csv("performance.csv")
+    monthly_df = pd.read_csv("dashboard/monthly_data.csv")
+    future_df = pd.read_csv("dashboard/future_projection.csv")
+    performance_df = pd.read_csv("dashboard/performance.csv")
 
     monthly_df["Date"] = pd.to_datetime(monthly_df["Date"])
     future_df["Date"] = pd.to_datetime(future_df["Date"])
@@ -32,3 +32,4 @@ pg.run()
 
 st.markdown("---")
 st.caption("Developed using Machine Learning-based Rolling Random Forest Forecasting | Abdulqadir Merchant | 2026")
+
