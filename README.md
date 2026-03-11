@@ -1,2 +1,256 @@
-# City-Wise-Crime-Analysis-and-Prediction
-A Machine Learning Based Framework for City-Wise Crime Analysis and Forecasting using monthly aggregated time-series data. 
+#Machine Learning Based City-Wise Crime Analysis and Forecasting
+
+A machine learning powered crime analytics system that analyzes historical crime patterns across multiple cities and forecasts future crime trends using time-series modeling and ensemble learning.
+
+The project combines data preprocessing, statistical analysis, machine learning forecasting, risk modeling, and interactive visualization to create a complete crime analysis pipeline.
+
+The system also includes an interactive Streamlit dashboard for exploring crime trends, forecasting results, and crime risk indicators.
+
+##Project Overview
+
+Urban crime patterns often evolve over time due to social, economic, and environmental factors. Understanding these patterns and forecasting future trends can assist in proactive decision-making and resource allocation.
+
+This project develops a city-wise crime forecasting framework that:
+
+analyzes historical crime trends
+
+measures structural crime risk
+
+predicts future monthly crime levels
+
+identifies cities with increasing crime risk
+
+provides an interactive visualization dashboard.
+
+The system uses machine learning and time-series techniques to transform raw crime records into actionable insights.
+
+##Dataset
+
+The dataset used in this project contains approximately 40,000 crime records across 29 cities, covering the period:
+
+January 2020 – July 2024
+
+Dataset attributes include:
+
+Date of occurrence
+
+Crime type
+
+City
+
+Victim gender
+
+Weapon used
+
+Date closed
+
+Other categorical attributes
+
+Source: https://www.kaggle.com/datasets/sudhanvahg/indian-crimes-dataset
+
+The raw event-level records were aggregated into monthly city-level time-series data for forecasting.
+
+##Project Pipeline
+
+The system follows a structured data science pipeline:
+
+Raw Crime Data
+↓
+Data Cleaning & Preprocessing
+↓
+Monthly Time-Series Aggregation
+↓
+Feature Engineering (Lag Features & Rolling Statistics)
+↓
+Crime Risk Index Calculation
+↓
+Forecasting Models (SARIMA & Random Forest)
+↓
+Model Evaluation (MAE, RMSE, MAPE)
+↓
+Recursive Forecasting
+↓
+Streamlit Dashboard Visualization
+
+##Feature Engineering
+
+To enable machine learning forecasting, time-series features were created from historical crime data.
+
+###Lag Features
+
+Lag_1
+
+Lag_2
+
+Lag_3
+
+Lag_6
+
+Lag_12
+
+These capture historical dependencies between past and future crime levels.
+
+###Rolling Statistics
+
+Rolling Mean (3 months)
+
+Rolling Mean (6 months)
+
+Rolling statistics help capture short-term crime trends.
+
+##Forecasting Models
+
+Two forecasting approaches were evaluated.
+
+###1. SARIMA (Baseline Statistical Model)
+
+SARIMA was implemented as a traditional time-series forecasting model capable of capturing trend and seasonal patterns.
+
+Limitations observed:
+
+difficulty capturing nonlinear patterns
+
+higher errors in volatile cities
+
+###2. Random Forest Forecasting Model
+
+A Rolling Random Forest regression model was used as the final forecasting model.
+
+Advantages:
+
+captures nonlinear relationships
+
+robust to noisy crime data
+
+effective with lag-based features
+
+The model predicts monthly crime counts for each city.
+
+Model Validation
+
+To ensure realistic model evaluation, rolling walk-forward validation was used.
+
+Process:
+
+Train model on historical data
+
+Predict next month
+
+Expand training window
+
+Retrain model
+
+Predict next step
+
+Evaluation metrics:
+
+Mean Absolute Error (MAE)
+
+Root Mean Squared Error (RMSE)
+
+Mean Absolute Percentage Error (MAPE)
+
+##Crime Risk Modeling
+
+The project introduces two risk indicators.
+
+1. Crime Risk Index (CRI)
+
+Measures structural crime risk based on historical patterns.
+
+Formula:
+
+CRI =
+0.5 × Normalized Crime Level
+
+0.3 × Trend Score
+
+0.2 × Volatility Score
+
+2. Forecast-Based Risk Indicator
+
+Measures future crime risk using forecast results.
+
+Formula:
+
+Risk Score =
+0.6 × (Forecast Mean / Historical Mean)
+
+0.4 × Coefficient of Variation
+
+Risk classification:
+
+Risk Score	Category
+> 0.80	High Risk
+> 0.65	Moderate Risk
+≤ 0.65	Low Risk
+
+##Interactive Dashboard
+
+An interactive Streamlit dashboard was built to visualize crime analytics results.
+
+Dashboard modules include:
+
+###City Analysis
+
+historical crime trends
+
+forecast visualization
+
+model performance metrics
+
+###City Comparison
+
+forecast accuracy ranking
+
+model performance comparison
+
+rising crime risk cities
+
+###Volatility vs Forecast Accuracy
+
+relationship between crime volatility and forecasting error
+
+###Structural Trend Analysis
+
+moving averages
+
+monthly momentum (delta)
+
+rolling trend slope
+
+volatility comparison
+
+##Technology Stack
+## 🚀 Tech Stack
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas)
+![NumPy](https://img.shields.io/badge/Numpy-013243?style=for-the-badge&logo=numpy)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-ffffff?style=for-the-badge&logo=matplotlib)
+![Scikit Learn](https://img.shields.io/badge/ScikitLearn-F7931E?style=for-the-badge&logo=scikitlearn)
+![Statsmodels](https://img.shields.io/badge/Statsmodels-2E4053?style=for-the-badge)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter)
+
+Installation
+
+Clone the repository:
+```
+git clone https://github.com/yourusername/crime-forecasting-project.git
+cd crime-forecasting-project
+```
+
+Install required dependencies:
+
+```
+pip install -r requirements.txt
+Running the Dashboard
+```
+
+Launch the Streamlit dashboard:
+
+```
+streamlit run dashboard/app.py
+```
+
+The dashboard will open in your browser. 
