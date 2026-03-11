@@ -102,7 +102,7 @@ higher errors in volatile cities
 
 A Rolling Random Forest regression model was used as the final forecasting model.
 
-Advantages:
+#### Advantages:
 
 captures nonlinear relationships
 
@@ -110,13 +110,11 @@ robust to noisy crime data
 
 effective with lag-based features
 
-The model predicts monthly crime counts for each city.
-
-Model Validation
+#### Model Validation
 
 To ensure realistic model evaluation, rolling walk-forward validation was used.
 
-Process:
+##### Process:
 
 Train model on historical data
 
@@ -128,7 +126,7 @@ Retrain model
 
 Predict next step
 
-Evaluation metrics:
+##### Evaluation metrics:
 
 Mean Absolute Error (MAE)
 
@@ -214,13 +212,7 @@ volatility comparison
 
 ## Technology Stack
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas)
-![NumPy](https://img.shields.io/badge/Numpy-013243?style=for-the-badge&logo=numpy)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-ffffff?style=for-the-badge&logo=matplotlib)
-![Scikit Learn](https://img.shields.io/badge/ScikitLearn-F7931E?style=for-the-badge&logo=scikitlearn)
-![Statsmodels](https://img.shields.io/badge/Statsmodels-2E4053?style=for-the-badge)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter)
+[![Stack](https://skillicons.dev/icons?i=py)](https://skillicons.dev)
 
 ## Installation
 
