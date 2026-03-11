@@ -211,11 +211,11 @@ rolling trend slope
 volatility comparison
 
 ## Technology Stack
-Programming Language: Python
-Data Analysis: Pandas
-Data Visualization: Matplotlib
-Forecast Models: Scikit-Learn
-Interactive Plot: Plotly
+Programming Language: Python <br />
+Data Analysis: Pandas <br />
+Data Visualization: Matplotlib <br />
+Forecast Models: Scikit-Learn <br />
+Interactive Plot: Plotly <br />
 Dashboard: Streamlit
 
 ## Installation
