@@ -54,23 +54,9 @@ The raw event-level records were aggregated into monthly city-level time-series 
 
 The system follows a structured data science pipeline:
 
-Raw Crime Data
-↓
-Data Cleaning & Preprocessing
-↓
-Monthly Time-Series Aggregation
-↓
-Feature Engineering (Lag Features & Rolling Statistics)
-↓
-Crime Risk Index Calculation
-↓
-Forecasting Models (SARIMA & Random Forest)
-↓
-Model Evaluation (MAE, RMSE, MAPE)
-↓
-Recursive Forecasting
-↓
-Streamlit Dashboard Visualization
+Raw Crime Data -> Data Cleaning & Preprocessing -> Monthly Time-Series Aggregation -> Feature Engineering (Lag Features & Rolling Statistics) ->
+Crime Risk Index Calculation -> Forecasting Models (SARIMA & Random Forest) -> Model Evaluation (MAE, RMSE, MAPE) -> Recursive Forecasting
+-> Streamlit Dashboard Visualization
 
 ## Feature Engineering
 
