@@ -211,8 +211,12 @@ rolling trend slope
 volatility comparison
 
 ## Technology Stack
-
-[![Stack](https://skillicons.dev/icons?i=py)](https://skillicons.dev)
+Programming Language: [![Python](https://skillicons.dev/icons?i=py)](https://skillicons.dev) 
+Data Analysis: [![Pandas](https://pandas.pydata.org/static/img/pandas_white.svg) 
+Data Visualization: [![Matplotlib](https://matplotlib.org/stable/_static/logo2.svg) 
+Forecast Models: [![Scikit Learn](https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png)
+Interactive Plot: [![Plotly](https://plotly.com/all_static/images/plotly-logomark.png)
+Dashboard: [![Streamlit](https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/streamlit-icon.png)
 
 ## Installation
 
