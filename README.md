@@ -1,4 +1,4 @@
-# Machine Learning Based City-Wise Crime Analysis and Forecasting
+# 📊 Machine Learning Based City-Wise Crime Analysis and Forecasting 
 
 A machine learning powered crime analytics system that analyzes historical crime patterns across multiple cities and forecasts future crime trends using time-series modeling and ensemble learning.
 
@@ -6,7 +6,7 @@ The project combines data preprocessing, statistical analysis, machine learning 
 
 The system also includes an interactive Streamlit dashboard for exploring crime trends, forecasting results, and crime risk indicators.
 
-## The Process
+## 🤖 The Process
 I downloaded a dataset from kaggle containing approximately 40,000 records. I cleaned it into a monthly-aggregated dataset for each city and month. There were total 29 cities across 55 months, giving almost 1600 records which would be useful for feature engineering and temporal machine learning modelling. 
 I performed Exploratory Data Analysis and extracted some key insights about crime trends including how crime volume did not alone dictate crime risk. It had to be paired with trend slopes and overall volatility to ascertain which cities were an emerging risk, which ones were stabilizing and which ones had a downward trend. 
 
