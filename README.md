@@ -15,7 +15,7 @@ I, then, created an interactive dashboard to evaluate all the forecasts that wer
 
 ## Future Improvements
 - The current dataset contained historical data which was more or less stable and static and did not replicate real life crime statistics. In the future, we could gain access to APIs that provide live data to the model which can be continuously retrained to give better results.
-- The model only took into account historical crime data without accounting for exogenous factors such as economic conditions, political situations, population density, etc, which significantly affects how crime data can fluctuate. We could train the model on such factors to ensure a more accurate and real-world ready model for implementation. 
+- The model only took into account historical crime data without accounting for exogenous factors such as economic conditions, political situations, population density, etc, which significantly affects how crime data can fluctuate. We could train the model on such factors to ensure a more accurate and practical model for implementation. 
 
 ## Technology Stack
 Programming Language: Python <br />
